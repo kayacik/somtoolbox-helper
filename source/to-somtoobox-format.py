@@ -57,7 +57,7 @@ while line:
 	if linecount == 1:
 		# Process header and  labelcols
 		for l in option.cols.split(','):
-			if int(l) < len(token) and int(l) > 0:
+			if int(l) <= len(token) and int(l) > 0:
 				labelcols.append(int(l)-1) # fix 1 index to 0 index here
 		print len(token) - len(labelcols)	
 		header = '#n'
